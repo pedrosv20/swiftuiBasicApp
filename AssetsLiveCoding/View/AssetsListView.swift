@@ -68,12 +68,12 @@ struct AssetsListView: View {
             VStack(alignment: .leading) {
                 HStack {
                     Text(asset.symbol)
-                        .fontWeight(.bold)
+                        .fontWeight(DS.Fonts.Weight.bold)
                     Text(asset.name)
                         .foregroundStyle(DS.AppColor.gray)
-                        .padding(6)
+                        .padding(DS.Spacing.s)
                         .background(
-                            RoundedRectangle(cornerRadius: 6)
+                            RoundedRectangle(cornerRadius: DS.CornerRadius.s)
                                 .fill(DS.AppColor.gray.opacity(0.1))
                         )
                 }
@@ -81,7 +81,7 @@ struct AssetsListView: View {
                     if let usdPrice = asset.usdPriceConverted {
                         Text("\(usdPrice)$")
                             .foregroundStyle(DS.AppColor.gray)
-                            .fontWeight(.bold)
+                            .fontWeight(DS.Fonts.Weight.bold)
                     }
                     if let changePercent = asset.changePercentConverted {
                         changePercentView(changePercent)
@@ -108,7 +108,7 @@ struct AssetsListView: View {
                 }, elseTransform: {
                     $0.foregroundStyle(DS.AppColor.red)
                 })
-                .fontWeight(.bold)
+                .fontWeight(DS.Fonts.Weight.bold)
         }
         
     }
@@ -144,9 +144,11 @@ struct AssetsListView: View {
 }
 
 #Preview {
-    AssetsListView(
+    var mock = AssetsServiceMock()
+    mock.modelToBeReturned = .init(data: [.fixture(name: "btc", symbol: "bitcoin")])
+    return AssetsListView(
         viewModel: AssetsListViewModel(
-            service: AssetsService()
+            service: mock
         )
     )
 }

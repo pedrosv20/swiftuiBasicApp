@@ -9,8 +9,19 @@ import Foundation
 import SwiftUI
 
 enum DS {
-    enum Spacing {}
-    enum Fonts {}
+    enum Spacing {
+        // 6
+        static let s: CGFloat = 6
+    }
+    enum CornerRadius {
+        // 6
+        static let s: CGFloat = 6
+    }
+    enum Fonts {
+        enum Weight {
+            static let bold: Font.Weight = .bold
+        }
+    }
     enum AppColor {
         static let gray:  Color = .gray
         static let green: Color = .green
