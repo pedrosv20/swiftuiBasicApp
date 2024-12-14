@@ -54,7 +54,7 @@ extension Asset {
         name: String,
         symbol: String,
         usdPrice: String = "1000",
-        changePercent: String = "0,5"
+        changePercent: String = "0.5"
     ) -> Self {
         .init(id: id, name: name, symbol: symbol, usdPrice: usdPrice, changePercent: changePercent)
     }
