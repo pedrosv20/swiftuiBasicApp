@@ -4,6 +4,6 @@
 
 import Foundation
 
-struct AssetsResponse: Decodable {
+struct AssetsResponse: Decodable, Equatable {
     let data: [Asset]
 }

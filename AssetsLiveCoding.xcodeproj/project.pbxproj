@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		079CED4F2D0E10B400CFCCED /* DS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CED4E2D0E10B400CFCCED /* DS.swift */; };
 		07D075BD2D0CAB7500057524 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D075BC2D0CAB7500057524 /* ViewExtensions.swift */; };
 		45481A322C871CDD00EEB467 /* AssetsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45481A312C871CDD00EEB467 /* AssetsResponse.swift */; };
 		45BC68CF2C77A59800148A5E /* AssetsLiveCodingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BC68CE2C77A59800148A5E /* AssetsLiveCodingApp.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		079CED4E2D0E10B400CFCCED /* DS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DS.swift; sourceTree = "<group>"; };
 		07D075BC2D0CAB7500057524 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		45481A312C871CDD00EEB467 /* AssetsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsResponse.swift; sourceTree = "<group>"; };
 		45BC68CB2C77A59800148A5E /* AssetsLiveCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetsLiveCoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +85,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		079CED4D2D0E10A200CFCCED /* DesignSystem */ = {
+			isa = PBXGroup;
+			children = (
+				079CED4E2D0E10B400CFCCED /* DS.swift */,
+			);
+			path = DesignSystem;
+			sourceTree = "<group>";
+		};
 		45BC68C22C77A59800148A5E = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +116,7 @@
 		45BC68CD2C77A59800148A5E /* AssetsLiveCoding */ = {
 			isa = PBXGroup;
 			children = (
+				079CED4D2D0E10A200CFCCED /* DesignSystem */,
 				45BC68FC2C77A60400148A5E /* Resources */,
 				45BC68FB2C77A5FD00148A5E /* View */,
 				45BC68FA2C77A5F500148A5E /* ViewModel */,
@@ -325,6 +336,7 @@
 			files = (
 				45CFD3D92C77B3B70076829D /* AssetsService.swift in Sources */,
 				45BC68D12C77A59800148A5E /* AssetsListView.swift in Sources */,
+				079CED4F2D0E10B400CFCCED /* DS.swift in Sources */,
 				07D075BD2D0CAB7500057524 /* ViewExtensions.swift in Sources */,
 				45481A322C871CDD00EEB467 /* AssetsResponse.swift in Sources */,
 				45CFD3D62C77B3770076829D /* HTTPClient.swift in Sources */,

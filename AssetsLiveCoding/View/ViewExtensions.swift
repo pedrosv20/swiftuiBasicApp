@@ -23,4 +23,22 @@ public extension View {
             elseTransform(self)
         }
     }
+    
+    /// Conditional modifier for `if`, `else if`, and `else`.
+       @ViewBuilder
+       func `if`<FirstContent: View, SecondContent: View, ElseContent: View>(
+           _ firstCondition: Bool,
+           transform: ((Self) -> FirstContent),
+           elseIfCondition: Bool,
+           elseIfTransform: ((Self) -> SecondContent),
+           elseTransform: ((Self) -> ElseContent)
+       ) -> some View {
+           if firstCondition {
+               transform(self)
+           } else if elseIfCondition {
+               elseIfTransform(self)
+           } else {
+               elseTransform(self)
+           }
+       }
 }

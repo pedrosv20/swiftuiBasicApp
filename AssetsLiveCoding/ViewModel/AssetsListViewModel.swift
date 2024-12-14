@@ -7,7 +7,7 @@ import Combine
 
 @MainActor
 final class AssetsListViewModel: ObservableObject {
-    private let service: AssetsService
+    private let service: AssetsServiceProtocol
     
     @Published var model: AssetsResponse?
     @Published var error: Error?
@@ -17,12 +17,13 @@ final class AssetsListViewModel: ObservableObject {
     @Published var showLikedScreen = false
     
     var cancellable: AnyCancellable?
-    var dispatchQueue: DispatchQueue = DispatchQueue.main
+    var dispatchQueue: DispatchQueue
     
-    private var cachedModel: AssetsResponse?
+    var cachedModel: AssetsResponse?
     
-    init(service: AssetsService) {
+    init(service: AssetsServiceProtocol, dispatchQueue: DispatchQueue = DispatchQueue.main) {
         self.service = service
+        self.dispatchQueue = dispatchQueue
     }
     
     func addTextPublisher() {
@@ -41,11 +42,9 @@ final class AssetsListViewModel: ObservableObject {
     func loadData() {
         cachedModel = nil
         makeRequest(asset: nil)
-        
-        
     }
     
-    func makeRequest(asset: String?) {
+    private func makeRequest(asset: String?) {
         Task {
             do {
                 isLoading = true

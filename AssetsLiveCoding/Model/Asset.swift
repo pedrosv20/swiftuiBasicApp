@@ -4,7 +4,7 @@
 
 import Foundation
 
-struct Asset: Decodable, Identifiable {
+struct Asset: Decodable, Identifiable, Equatable {
     let id: String
     let name: String
     let symbol: String
@@ -46,3 +46,17 @@ struct Asset: Decodable, Identifiable {
         return formatter.string(from: number)
     }
 }
+
+#if DEBUG
+extension Asset {
+    static func fixture(
+        id: String = UUID().uuidString,
+        name: String,
+        symbol: String,
+        usdPrice: String = "1000",
+        changePercent: String = "0,5"
+    ) -> Self {
+        .init(id: id, name: name, symbol: symbol, usdPrice: usdPrice, changePercent: changePercent)
+    }
+}
+#endif

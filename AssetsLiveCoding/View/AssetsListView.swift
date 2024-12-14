@@ -51,7 +51,7 @@ struct AssetsListView: View {
                 assetView(asset)
                 Spacer()
                 Image(systemName: viewModel.likedAssets.contains(asset.id) ? "heart.fill" : "heart")
-                    .foregroundStyle(.blue)
+                    .foregroundStyle(DS.AppColor.blue)
                     .onTapGesture {
                     viewModel.toggleLike(for: asset)
                 }
@@ -68,18 +68,49 @@ struct AssetsListView: View {
             VStack(alignment: .leading) {
                 HStack {
                     Text(asset.symbol)
+                        .fontWeight(.bold)
                     Text(asset.name)
+                        .foregroundStyle(DS.AppColor.gray)
+                        .padding(6)
+                        .background(
+                            RoundedRectangle(cornerRadius: 6)
+                                .fill(DS.AppColor.gray.opacity(0.1))
+                        )
                 }
                 HStack {
                     if let usdPrice = asset.usdPriceConverted {
-                        Text(usdPrice)
+                        Text("\(usdPrice)$")
+                            .foregroundStyle(DS.AppColor.gray)
+                            .fontWeight(.bold)
                     }
                     if let changePercent = asset.changePercentConverted {
-                        Text(changePercent)
+                        changePercentView(changePercent)
                     }
                 }
             }
         }
+    }
+    
+    @ViewBuilder
+    func changePercentView(_ changePercent: String) -> some View {
+        if let doubleChangePercent = Double(changePercent.replacingOccurrences(of: ",", with: ".")) {
+            Text(
+                doubleChangePercent > 0
+                ? "+\(changePercent)"
+                : changePercent
+            )
+                .if(doubleChangePercent > 0, transform: {
+                    $0.foregroundStyle(DS.AppColor.green)
+                },
+                elseIfCondition: doubleChangePercent == 0,
+                elseIfTransform: {
+                    $0.foregroundStyle(DS.AppColor.gray)
+                }, elseTransform: {
+                    $0.foregroundStyle(DS.AppColor.red)
+                })
+                .fontWeight(.bold)
+        }
+        
     }
     
     func asyncImage(_ url: URL) -> some View {
@@ -90,13 +121,14 @@ struct AssetsListView: View {
             case .success(let image):
                 image.resizable()
                     .scaledToFit()
-                    .frame(width: 50, height: 50)
+                    .frame(width: DS.Frame.width, height: DS.Frame.height)
+                    .clipShape(Circle())
             case .failure:
                 Circle()
-                    .foregroundStyle(.gray)
-                    .frame(width: 50, height: 50)
+                    .foregroundStyle(DS.AppColor.gray)
+                    .frame(width: DS.Frame.width, height: DS.Frame.height)
             @unknown default:
-                EmptyView() // Handle any future unknown cases
+                EmptyView()
             }
         }
     }
