@@ -9,7 +9,7 @@ final class AssetsLiveCodingTests: XCTestCase {
 
     @MainActor func test_loadDataIsCalled_itShouldLoadData() async throws {
         // Given
-        var serviceMock = AssetsServiceMock()
+        let serviceMock = AssetsServiceMock()
         let modelToBeReturned = AssetsResponse(data: [
             .fixture(name: "Bitcoin", symbol: "BTC"),
             .fixture(name: "ETH", symbol: "ethereum"),
@@ -31,7 +31,7 @@ final class AssetsLiveCodingTests: XCTestCase {
     
     @MainActor func test_searchBarText_whenTextIsAdded_itShouldReturnModelFiltered() async throws {
         // Given
-        var serviceMock = AssetsServiceMock()
+        let serviceMock = AssetsServiceMock()
         let modelToBeReturned = AssetsResponse(data: [
             .fixture(name: "Bitcoin", symbol: "BTC"),
             .fixture(name: "ETH", symbol: "ethereum"),
@@ -60,7 +60,7 @@ final class AssetsLiveCodingTests: XCTestCase {
     
     @MainActor func test_searchBarText_whenTextIsRemoved_itShouldReturnCachedData() async throws {
         // Given
-        var serviceMock = AssetsServiceMock()
+        let serviceMock = AssetsServiceMock()
         let modelToBeReturned = AssetsResponse(data: [
             .fixture(name: "Bitcoin", symbol: "BTC"),
             .fixture(name: "ETH", symbol: "ethereum"),
@@ -85,7 +85,7 @@ final class AssetsLiveCodingTests: XCTestCase {
     
     @MainActor func test_toggleLike_whenAssetIsNotLiked_itShouldLikeTheAsset() async throws {
         // Given
-        var serviceMock = AssetsServiceMock()
+        let serviceMock = AssetsServiceMock()
         let id = UUID().uuidString
         let asset = Asset.fixture(id: id, name: "Bitcoin", symbol: "BTC")
         let modelToBeReturned = AssetsResponse(data: [
