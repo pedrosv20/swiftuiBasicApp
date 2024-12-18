@@ -16,14 +16,13 @@
 		079CED4F2D0E10B400CFCCED /* DS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CED4E2D0E10B400CFCCED /* DS.swift */; };
 		079CED542D0E396A00CFCCED /* AssetsLiveCodingSnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079CED532D0E396A00CFCCED /* AssetsLiveCodingSnapshotTests.swift */; };
 		07D075BD2D0CAB7500057524 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D075BC2D0CAB7500057524 /* ViewExtensions.swift */; };
+		07E742892D124AE2008DC41D /* DependencyInjector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E742882D124AE2008DC41D /* DependencyInjector.swift */; };
 		45481A322C871CDD00EEB467 /* AssetsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45481A312C871CDD00EEB467 /* AssetsResponse.swift */; };
 		45BC68CF2C77A59800148A5E /* AssetsLiveCodingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BC68CE2C77A59800148A5E /* AssetsLiveCodingApp.swift */; };
 		45BC68D12C77A59800148A5E /* AssetsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BC68D02C77A59800148A5E /* AssetsListView.swift */; };
 		45BC68D32C77A59A00148A5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45BC68D22C77A59A00148A5E /* Assets.xcassets */; };
 		45BC68D62C77A59A00148A5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45BC68D52C77A59A00148A5E /* Preview Assets.xcassets */; };
 		45BC68E02C77A59B00148A5E /* AssetsLiveCodingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BC68DF2C77A59B00148A5E /* AssetsLiveCodingTests.swift */; };
-		45BC68EA2C77A59B00148A5E /* AssetsLiveCodingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BC68E92C77A59B00148A5E /* AssetsLiveCodingUITests.swift */; };
-		45BC68EC2C77A59B00148A5E /* AssetsLiveCodingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BC68EB2C77A59B00148A5E /* AssetsLiveCodingUITestsLaunchTests.swift */; };
 		45CFD3D12C77A7500076829D /* AssetsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CFD3D02C77A7500076829D /* AssetsListViewModel.swift */; };
 		45CFD3D32C77A78B0076829D /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CFD3D22C77A78B0076829D /* Asset.swift */; };
 		45CFD3D62C77B3770076829D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45CFD3D52C77B3770076829D /* HTTPClient.swift */; };
@@ -55,6 +54,7 @@
 		079CED4E2D0E10B400CFCCED /* DS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DS.swift; sourceTree = "<group>"; };
 		079CED532D0E396A00CFCCED /* AssetsLiveCodingSnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsLiveCodingSnapshotTests.swift; sourceTree = "<group>"; };
 		07D075BC2D0CAB7500057524 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		07E742882D124AE2008DC41D /* DependencyInjector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjector.swift; sourceTree = "<group>"; };
 		45481A312C871CDD00EEB467 /* AssetsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsResponse.swift; sourceTree = "<group>"; };
 		45BC68CB2C77A59800148A5E /* AssetsLiveCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssetsLiveCoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45BC68CE2C77A59800148A5E /* AssetsLiveCodingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsLiveCodingApp.swift; sourceTree = "<group>"; };
@@ -64,8 +64,6 @@
 		45BC68DB2C77A59B00148A5E /* AssetsLiveCodingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssetsLiveCodingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45BC68DF2C77A59B00148A5E /* AssetsLiveCodingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsLiveCodingTests.swift; sourceTree = "<group>"; };
 		45BC68E52C77A59B00148A5E /* AssetsLiveCodingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssetsLiveCodingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		45BC68E92C77A59B00148A5E /* AssetsLiveCodingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsLiveCodingUITests.swift; sourceTree = "<group>"; };
-		45BC68EB2C77A59B00148A5E /* AssetsLiveCodingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsLiveCodingUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		45CFD3D02C77A7500076829D /* AssetsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsListViewModel.swift; sourceTree = "<group>"; };
 		45CFD3D22C77A78B0076829D /* Asset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asset.swift; sourceTree = "<group>"; };
 		45CFD3D52C77B3770076829D /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -126,12 +124,27 @@
 			path = DesignSystem;
 			sourceTree = "<group>";
 		};
+		07E742842D122034008DC41D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		07E742872D124AD4008DC41D /* DependencyInjection */ = {
+			isa = PBXGroup;
+			children = (
+				07E742882D124AE2008DC41D /* DependencyInjector.swift */,
+			);
+			path = DependencyInjection;
+			sourceTree = "<group>";
+		};
 		45BC68C22C77A59800148A5E = {
 			isa = PBXGroup;
 			children = (
 				45BC68CD2C77A59800148A5E /* AssetsLiveCoding */,
 				45BC68DE2C77A59B00148A5E /* AssetsLiveCodingTests */,
-				45BC68E82C77A59B00148A5E /* AssetsLiveCodingUITests */,
+				07E742842D122034008DC41D /* Frameworks */,
 				45BC68CC2C77A59800148A5E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -149,6 +162,7 @@
 		45BC68CD2C77A59800148A5E /* AssetsLiveCoding */ = {
 			isa = PBXGroup;
 			children = (
+				07E742872D124AD4008DC41D /* DependencyInjection */,
 				079CED4D2D0E10A200CFCCED /* DesignSystem */,
 				45BC68FC2C77A60400148A5E /* Resources */,
 				45BC68FB2C77A5FD00148A5E /* View */,
@@ -177,15 +191,6 @@
 				079CED532D0E396A00CFCCED /* AssetsLiveCodingSnapshotTests.swift */,
 			);
 			path = AssetsLiveCodingTests;
-			sourceTree = "<group>";
-		};
-		45BC68E82C77A59B00148A5E /* AssetsLiveCodingUITests */ = {
-			isa = PBXGroup;
-			children = (
-				45BC68E92C77A59B00148A5E /* AssetsLiveCodingUITests.swift */,
-				45BC68EB2C77A59B00148A5E /* AssetsLiveCodingUITestsLaunchTests.swift */,
-			);
-			path = AssetsLiveCodingUITests;
 			sourceTree = "<group>";
 		};
 		45BC68F82C77A5E700148A5E /* Service */ = {
@@ -387,6 +392,7 @@
 				079CED4F2D0E10B400CFCCED /* DS.swift in Sources */,
 				07D075BD2D0CAB7500057524 /* ViewExtensions.swift in Sources */,
 				45481A322C871CDD00EEB467 /* AssetsResponse.swift in Sources */,
+				07E742892D124AE2008DC41D /* DependencyInjector.swift in Sources */,
 				45CFD3D62C77B3770076829D /* HTTPClient.swift in Sources */,
 				45CFD3D12C77A7500076829D /* AssetsListViewModel.swift in Sources */,
 				45CFD3D32C77A78B0076829D /* Asset.swift in Sources */,
@@ -407,8 +413,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45BC68EA2C77A59B00148A5E /* AssetsLiveCodingUITests.swift in Sources */,
-				45BC68EC2C77A59B00148A5E /* AssetsLiveCodingUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,7 +610,6 @@
 		45BC68F32C77A59B00148A5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -625,7 +628,6 @@
 		45BC68F42C77A59B00148A5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -644,7 +646,6 @@
 		45BC68F62C77A59B00148A5E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -661,7 +662,6 @@
 		45BC68F72C77A59B00148A5E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
